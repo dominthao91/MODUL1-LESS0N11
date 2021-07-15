@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị 20 số nguyên tố</title>
+</head>
+<body>
+<script>
+    let a = +prompt('nhập vào số lương SNT');
+    let count = 0;
+    let ketqua = "";
+    let check = true;
+    for (let i = 2; count < a ; i++) {
+        check = true;
+        for (let j = Math.round(Math.sqrt(i)); j < i; j++) {
+            if (i%j==0){
+                check = false;
+                break;
+            }
+        }
+        if (check){
+            ketqua = ketqua + i + " ,";
+            count++;
+        }
+    }document.write(ketqua);
+     //   in 5 số nguyên tố
+    // let i=2;
+    // let count = 0;
+    // while (count<5){
+    //     if (i%2==0){
+    //         document.write(i);
+    //         document.write('<br>');
+    //         count++
+    //     }i++
+    // }
+
+</script>
+</body>
+</html>
+

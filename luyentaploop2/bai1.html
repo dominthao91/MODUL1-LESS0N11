@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in dãy fibonacci</title>
+</head>
+<body>
+<script>
+    // fibonacci là phần tử bằng tổng 2 phần tử liền trước đó;
+    let n = +prompt('so lần hiển thị');
+    let a =0;
+    let b=1;
+    let result =b;
+    let text =0;
+    for (let i = 1; i <=n ; i++) {
+        if (i==1){
+            result=1;
+            text = text + result+'<br>';
+        }else {
+            result = a + b;
+            a = b;
+            b = result;
+            text = text + result +'<br>';
+        }
+    }document.write(text);
+</script>
+</body>
+</html>

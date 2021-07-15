@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game đoán số</title>
+</head>
+<body>
+<button id="choi" style="width: 200px;height: 200px;
+background-color: red" onclick="game()">Chơi</button>
+<script>
+function game() {
+    let  a = +prompt ("nhập khoảng số từ ");
+    let b = +prompt ("đến khoảng ");
+    let random = Math.round(Math.random()*(b-a+1)) + a;
+    for (let i=0;i<3;i++) {
+        let doanso = +prompt("Bạn đoán số mấy");
+        if (doanso == random) {
+            document.write( '<img src="qua.jpg" height="501px" width="800px"/>');
+            break;
+        } else if (doanso < random) {
+            if (i==2){
+                alert('hết 3 lần đoán rồi Con Gà');
+            }else {
+                alert("bé quá tăng lên đi");
+            }
+        } else {
+            if (i==2){
+                alert('hết 3 lần đoán rồi Con Gà');
+            }else {
+                alert("Lớn quá rồi giảm đi");
+            }
+        }
+    }
+    alert( 'số random là'+random);
+}
+</script>
+</body>
+</html>
