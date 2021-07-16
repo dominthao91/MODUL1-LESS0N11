@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in tam giác</title>
+</head>
+<body>
+<script>
+
+    function tamgiac1() {
+        let count ='';
+        for (let i = 1; i <=7; i++) {
+            for (let j = 1; j <=i; j++) {
+                count+='*';
+            }
+            count+='<br>'
+        }
+        document.write(count+'<br>');
+    }tamgiac1();
+
+    function tamgiac2() {
+        let count ='';
+        for (let i = 7; i >=1 ; i--) {
+            for (let j = 1; j <=i ; j++) {
+                count+='*';
+            }
+            count+='<br>'
+        }
+        document.write(count+'<br>');
+    }tamgiac2();
+
+    function tamgiac3() {
+    let count='';
+        for (let i = 7; i >=1; i--) {
+            for (let j = 1; j <= 7; j++) {
+                if (j<i){
+                    count += "&nbsp&nbsp";
+                }else {
+                    count+= "*";
+                }
+            }count+='<br>'
+        }document.write(count+'<br>');
+    }tamgiac3();
+
+    function tamgiac4() {
+        let count =""
+        for (let i=7;i>=1;i--) {
+            for (let j = 7; j >=1; j--) {
+                if (j<=i){
+                    count += "*";
+                }else {
+                    count+= "&nbsp&nbsp";
+                }
+            }
+            count+="<br>"
+        }
+        document.write(count +"<br>");
+    }tamgiac4();
+</script>
+</body>
+</html>

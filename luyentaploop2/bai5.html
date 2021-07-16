@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ứng dụng tính lãi ngân hàng</title>
+</head>
+<body>
+<script>
+    let sotiengui =+prompt('nhập vào số tiền gửi');
+    let sothang =+ prompt('nhập vào số tháng gửi');
+    let rate = 6;
+    let laixuat = 0;
+    let tonglai = 0;
+    for (let i=1; i<=sothang; i++){
+        laixuat =(sotiengui*rate)/100;
+        tonglai+=laixuat;
+        sotiengui+=laixuat;
+    }
+    document.write(" tổng tiền lãi của bạn trong "+sothang+" tháng là  :"+tonglai+'VND');
+</script>
+</body>
+</html>
